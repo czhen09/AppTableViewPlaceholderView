@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BaseViewController.h
 //  AppTableViewPlaceholderView
 //
 //  Created by 郑旭 on 2017/7/20.
@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseViewController.h"
-@interface ViewController : BaseViewController
 
-
+@interface BaseViewController : UIViewController
+- (void)loadData;
+@property (nonatomic,strong) UITableView *tableView;
 @end
-

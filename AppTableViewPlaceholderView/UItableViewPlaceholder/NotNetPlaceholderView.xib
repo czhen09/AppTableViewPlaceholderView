@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="gVc-Bf-6wf" customClass="NotNetPlaceholderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="peh-vk-5iG">
+                    <rect key="frame" x="107" y="263.5" width="160" height="140"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nodata.png" translatesAutoresizingMaskIntoConstraints="NO" id="rsX-j3-KJk">
+                            <rect key="frame" x="0.0" y="0.0" width="160" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="X80-26-cA0"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mdl-bR-haW">
+                            <rect key="frame" x="0.0" y="100" width="160" height="40"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0V-Or-IfT">
+                                    <rect key="frame" x="51" y="5.5" width="58" height="29"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <state key="normal" title="再次连接"/>
+                                    <connections>
+                                        <action selector="refresh:" destination="gVc-Bf-6wf" eventType="touchUpInside" id="7iy-Mh-WeY"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="b0V-Or-IfT" firstAttribute="centerX" secondItem="Mdl-bR-haW" secondAttribute="centerX" id="UNs-tH-zY7"/>
+                                <constraint firstItem="b0V-Or-IfT" firstAttribute="centerY" secondItem="Mdl-bR-haW" secondAttribute="centerY" id="oxU-9c-DKF"/>
+                                <constraint firstItem="b0V-Or-IfT" firstAttribute="centerX" secondItem="Mdl-bR-haW" secondAttribute="centerX" id="vGK-Jx-fBC"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="rsX-j3-KJk" firstAttribute="centerX" secondItem="peh-vk-5iG" secondAttribute="centerX" id="2qa-s1-h69"/>
+                        <constraint firstAttribute="trailing" secondItem="Mdl-bR-haW" secondAttribute="trailing" id="4uN-2J-RoV"/>
+                        <constraint firstItem="Mdl-bR-haW" firstAttribute="top" secondItem="rsX-j3-KJk" secondAttribute="bottom" id="EMa-VT-FgZ"/>
+                        <constraint firstAttribute="height" constant="140" id="MQl-Vv-n4y"/>
+                        <constraint firstAttribute="bottom" secondItem="Mdl-bR-haW" secondAttribute="bottom" id="SGn-sJ-Cda"/>
+                        <constraint firstItem="rsX-j3-KJk" firstAttribute="width" secondItem="peh-vk-5iG" secondAttribute="width" id="SiX-4S-nKb"/>
+                        <constraint firstAttribute="width" constant="160" id="im9-UT-jfp"/>
+                        <constraint firstItem="Mdl-bR-haW" firstAttribute="leading" secondItem="peh-vk-5iG" secondAttribute="leading" id="kDV-ba-JB9"/>
+                        <constraint firstItem="rsX-j3-KJk" firstAttribute="top" secondItem="peh-vk-5iG" secondAttribute="top" id="tmI-iJ-EMz"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="peh-vk-5iG" firstAttribute="centerY" secondItem="gVc-Bf-6wf" secondAttribute="centerY" id="ja8-5x-dCo"/>
+                <constraint firstItem="peh-vk-5iG" firstAttribute="centerX" secondItem="gVc-Bf-6wf" secondAttribute="centerX" id="xfj-TX-tO1"/>
+            </constraints>
+            <point key="canvasLocation" x="-591" y="-476"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="nodata.png" width="363" height="156"/>
+    </resources>
+</document>

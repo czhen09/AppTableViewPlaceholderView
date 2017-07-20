@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ZXNetworkingConfigurationManager.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +16,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+   
+    BOOL isReachability = [ZXNetworkingConfigurationManager shareInstance].isReachable;
+    if (isReachability) {
+        
+        NSLog(@"isReachability");
+    }
+
     return YES;
 }
 

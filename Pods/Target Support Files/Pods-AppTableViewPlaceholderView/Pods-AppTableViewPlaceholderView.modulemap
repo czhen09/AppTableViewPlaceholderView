@@ -1,0 +1,6 @@
+framework module Pods_AppTableViewPlaceholderView {
+  umbrella header "Pods-AppTableViewPlaceholderView-umbrella.h"
+
+  export *
+  module * { export * }
+}
