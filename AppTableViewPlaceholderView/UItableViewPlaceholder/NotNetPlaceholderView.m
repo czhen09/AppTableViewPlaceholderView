@@ -9,8 +9,6 @@
 #import "NotNetPlaceholderView.h"
 
 @implementation NotNetPlaceholderView
-
-
 - (IBAction)refresh:(id)sender {
     
     if ([self.delegate respondsToSelector:@selector(reRequesData)]) {

@@ -7,8 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "UITableView+Placeholder.h"
-#import <MBProgressHUD/MBProgressHUD.h>
 @interface ViewController ()
 //@property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) NSArray *dataArr;
@@ -20,16 +18,7 @@
     [super viewDidLoad];
     
     [self.view addSubview:self.tableView];
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC));
-    __weak typeof(self) weakSelf = self;
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
-    dispatch_after(delayTime, dispatch_get_main_queue(), ^{
-        
-        self.dataArr = @[];
-        [weakSelf.tableView reloadData];
-    });
-
+    
 }
 
 #pragma mark - ReRequesDataDelegate

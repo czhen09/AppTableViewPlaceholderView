@@ -11,17 +11,10 @@
 #import "NoDataPlaceholderView.h"
 #import "ZXNetworkingConfigurationManager.h"
 #import "NotNetPlaceholderView.h"
-static  NSString *isFirstLoad = @"isFirstLoad";
-
-#define UserDefaults [NSUserDefaults standardUserDefaults]
-
-
 @implementation UITableView (Placeholder)
 
 + (void)load{
-    
 
-    [UserDefaults setBool:YES forKey:isFirstLoad];
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
 //TODO: 这里后面根据需求再改动吧；1.可以将没有数据和没有网络状态合并成一个placeholderview，只需要传递不同的图片即可；  2.如果分开成两个的时候，要考虑开始没有网络，后面又突然有了网络的情况，是否需要隐藏没有网络的那个view？待测试
@@ -35,7 +28,6 @@ static  NSString *isFirstLoad = @"isFirstLoad";
         
     });
 }
-
 - (void)displayNotNetworkStatus
 {
     [self creatNotNetPlaceholderView];
@@ -43,11 +35,10 @@ static  NSString *isFirstLoad = @"isFirstLoad";
 
 - (void)displayNoDataStatus
 {
-
-    if (![UserDefaults boolForKey:isFirstLoad]) {
+    if (!self.firstReload) {
         [self checkEmpty];
     }
-    [UserDefaults setBool:NO forKey:isFirstLoad];
+    self.firstReload = NO;
     //为何重复调用
     [self displayNoDataStatus];
 }
@@ -67,13 +58,12 @@ static  NSString *isFirstLoad = @"isFirstLoad";
     for (NSInteger i = 0; i <= sections; i++) {
         
         NSInteger rows = [dataSource tableView:self numberOfRowsInSection:i];
-        if (rows) {
+        //不能仅仅考虑numberofrows==0;还得考虑section!=0;rows==0;有sectionheader的时候
+        if (rows||sections>0) {
             
             isEmpty = NO;
         }
     }
-    
-    
     if (isEmpty) {
         
         if (!self.placeholderView) {
@@ -134,7 +124,13 @@ static  NSString *isFirstLoad = @"isFirstLoad";
 {
     objc_setAssociatedObject(self, @selector(reRequestDelegate), reRequestDelegate, OBJC_ASSOCIATION_ASSIGN);
 }
+- (BOOL)firstReload {
+    return [objc_getAssociatedObject(self, @selector(firstReload)) boolValue];
+}
 
+- (void)setFirstReload:(BOOL)firstReload {
+    objc_setAssociatedObject(self, @selector(firstReload), @(firstReload), OBJC_ASSOCIATION_ASSIGN);
+}
 @end
 
 

@@ -16,15 +16,18 @@
 		241A04F11F204C030036F237 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241A04EF1F204C030036F237 /* LaunchScreen.storyboard */; };
 		241A04FC1F204C030036F237 /* AppTableViewPlaceholderViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 241A04FB1F204C030036F237 /* AppTableViewPlaceholderViewTests.m */; };
 		241A05071F204C030036F237 /* AppTableViewPlaceholderViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 241A05061F204C030036F237 /* AppTableViewPlaceholderViewUITests.m */; };
-		241A05AF1F204CC40036F237 /* NSObject+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 241A05A91F204CC40036F237 /* NSObject+Swizzling.m */; };
-		241A05B01F204CC40036F237 /* UITableView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 241A05AB1F204CC40036F237 /* UITableView+Placeholder.m */; };
-		241A05B11F204CC40036F237 /* NoDataPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 241A05AD1F204CC40036F237 /* NoDataPlaceholderView.m */; };
-		241A05B21F204CC40036F237 /* NoDataPlaceholderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 241A05AE1F204CC40036F237 /* NoDataPlaceholderView.xib */; };
-		241A05B41F204D170036F237 /* nodata.png in Resources */ = {isa = PBXBuildFile; fileRef = 241A05B31F204D170036F237 /* nodata.png */; };
 		241E53BE1F20A5830011FEE7 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E53BD1F20A5830011FEE7 /* BaseViewController.m */; };
+		24369081206E5F52006DDA49 /* nodata.png in Resources */ = {isa = PBXBuildFile; fileRef = 2436906F206E5F50006DDA49 /* nodata.png */; };
+		24369082206E5F52006DDA49 /* NoDataPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24369071206E5F50006DDA49 /* NoDataPlaceholderView.m */; };
+		24369083206E5F52006DDA49 /* NoDataPlaceholderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24369072206E5F50006DDA49 /* NoDataPlaceholderView.xib */; };
+		24369084206E5F52006DDA49 /* NotNetPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24369074206E5F50006DDA49 /* NotNetPlaceholderView.m */; };
+		24369085206E5F52006DDA49 /* NotNetPlaceholderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24369075206E5F50006DDA49 /* NotNetPlaceholderView.xib */; };
+		24369086206E5F52006DDA49 /* NSObject+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 24369077206E5F50006DDA49 /* NSObject+Swizzling.m */; };
+		24369087206E5F52006DDA49 /* UITableView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2436907A206E5F50006DDA49 /* UITableView+Placeholder.m */; };
+		24369088206E5F52006DDA49 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 2436907E206E5F50006DDA49 /* Aspects.m */; };
+		24369089206E5F52006DDA49 /* ZXAspectEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 24369080206E5F50006DDA49 /* ZXAspectEx.m */; };
+		2436908C206E604C006DDA49 /* NetworkRequestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2436908B206E604C006DDA49 /* NetworkRequestTool.m */; };
 		24BEFC231F207DC000C317F7 /* ZXNetworkingConfigurationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 24BEFC221F207DC000C317F7 /* ZXNetworkingConfigurationManager.m */; };
-		24D036811F2089AC0009BC81 /* NotNetPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D036801F2089AC0009BC81 /* NotNetPlaceholderView.m */; };
-		24D036831F2089C60009BC81 /* NotNetPlaceholderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24D036821F2089C60009BC81 /* NotNetPlaceholderView.xib */; };
 		A8B19CA695EA2272A5285730 /* Pods_AppTableViewPlaceholderView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B2CB4DF206A9BDFFCE20671 /* Pods_AppTableViewPlaceholderView.framework */; };
 		ADB90C15BD84F0D918BF32B7 /* Pods_AppTableViewPlaceholderViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3212B346C5562B22DC2C1FD /* Pods_AppTableViewPlaceholderViewTests.framework */; };
 /* End PBXBuildFile section */
@@ -64,22 +67,28 @@
 		241A05021F204C030036F237 /* AppTableViewPlaceholderViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppTableViewPlaceholderViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		241A05061F204C030036F237 /* AppTableViewPlaceholderViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppTableViewPlaceholderViewUITests.m; sourceTree = "<group>"; };
 		241A05081F204C030036F237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		241A05A81F204CC40036F237 /* NSObject+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzling.h"; sourceTree = "<group>"; };
-		241A05A91F204CC40036F237 /* NSObject+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzling.m"; sourceTree = "<group>"; };
-		241A05AA1F204CC40036F237 /* UITableView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Placeholder.h"; sourceTree = "<group>"; };
-		241A05AB1F204CC40036F237 /* UITableView+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Placeholder.m"; sourceTree = "<group>"; };
-		241A05AC1F204CC40036F237 /* NoDataPlaceholderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoDataPlaceholderView.h; sourceTree = "<group>"; };
-		241A05AD1F204CC40036F237 /* NoDataPlaceholderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoDataPlaceholderView.m; sourceTree = "<group>"; };
-		241A05AE1F204CC40036F237 /* NoDataPlaceholderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoDataPlaceholderView.xib; sourceTree = "<group>"; };
-		241A05B31F204D170036F237 /* nodata.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nodata.png; sourceTree = "<group>"; };
 		241E53BC1F20A5830011FEE7 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		241E53BD1F20A5830011FEE7 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		2436906F206E5F50006DDA49 /* nodata.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nodata.png; sourceTree = "<group>"; };
+		24369070206E5F50006DDA49 /* NoDataPlaceholderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoDataPlaceholderView.h; sourceTree = "<group>"; };
+		24369071206E5F50006DDA49 /* NoDataPlaceholderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoDataPlaceholderView.m; sourceTree = "<group>"; };
+		24369072206E5F50006DDA49 /* NoDataPlaceholderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoDataPlaceholderView.xib; sourceTree = "<group>"; };
+		24369073206E5F50006DDA49 /* NotNetPlaceholderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotNetPlaceholderView.h; sourceTree = "<group>"; };
+		24369074206E5F50006DDA49 /* NotNetPlaceholderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotNetPlaceholderView.m; sourceTree = "<group>"; };
+		24369075206E5F50006DDA49 /* NotNetPlaceholderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotNetPlaceholderView.xib; sourceTree = "<group>"; };
+		24369076206E5F50006DDA49 /* NSObject+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzling.h"; sourceTree = "<group>"; };
+		24369077206E5F50006DDA49 /* NSObject+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzling.m"; sourceTree = "<group>"; };
+		24369078206E5F50006DDA49 /* ReRequesDataDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReRequesDataDelegate.h; sourceTree = "<group>"; };
+		24369079206E5F50006DDA49 /* UITableView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Placeholder.h"; sourceTree = "<group>"; };
+		2436907A206E5F50006DDA49 /* UITableView+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Placeholder.m"; sourceTree = "<group>"; };
+		2436907D206E5F50006DDA49 /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
+		2436907E206E5F50006DDA49 /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
+		2436907F206E5F50006DDA49 /* ZXAspectEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXAspectEx.h; sourceTree = "<group>"; };
+		24369080206E5F50006DDA49 /* ZXAspectEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXAspectEx.m; sourceTree = "<group>"; };
+		2436908A206E604C006DDA49 /* NetworkRequestTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkRequestTool.h; sourceTree = "<group>"; };
+		2436908B206E604C006DDA49 /* NetworkRequestTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkRequestTool.m; sourceTree = "<group>"; };
 		24BEFC211F207DC000C317F7 /* ZXNetworkingConfigurationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXNetworkingConfigurationManager.h; sourceTree = "<group>"; };
 		24BEFC221F207DC000C317F7 /* ZXNetworkingConfigurationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXNetworkingConfigurationManager.m; sourceTree = "<group>"; };
-		24D0367F1F2089AC0009BC81 /* NotNetPlaceholderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotNetPlaceholderView.h; sourceTree = "<group>"; };
-		24D036801F2089AC0009BC81 /* NotNetPlaceholderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotNetPlaceholderView.m; sourceTree = "<group>"; };
-		24D036821F2089C60009BC81 /* NotNetPlaceholderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotNetPlaceholderView.xib; sourceTree = "<group>"; };
-		24D036841F208F2D0009BC81 /* ReRequesDataDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReRequesDataDelegate.h; sourceTree = "<group>"; };
 		6B2CB4DF206A9BDFFCE20671 /* Pods_AppTableViewPlaceholderView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppTableViewPlaceholderView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76AA829B72C79A509E5554FA /* Pods-AppTableViewPlaceholderViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppTableViewPlaceholderViewUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppTableViewPlaceholderViewUITests/Pods-AppTableViewPlaceholderViewUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7907C625FB3806BA09E93215 /* Pods_AppTableViewPlaceholderViewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppTableViewPlaceholderViewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,12 +162,13 @@
 		241A04E01F204C020036F237 /* AppTableViewPlaceholderView */ = {
 			isa = PBXGroup;
 			children = (
-				24BEFC1D1F205F2300C317F7 /* Reachability */,
-				241A05A71F204CC40036F237 /* UITableViewPlaceholder */,
+				2436906E206E5F50006DDA49 /* UItableViewPlaceholder */,
 				241A04E41F204C030036F237 /* AppDelegate.h */,
 				241A04E51F204C030036F237 /* AppDelegate.m */,
 				241A04E71F204C030036F237 /* ViewController.h */,
 				241A04E81F204C030036F237 /* ViewController.m */,
+				2436908A206E604C006DDA49 /* NetworkRequestTool.h */,
+				2436908B206E604C006DDA49 /* NetworkRequestTool.m */,
 				241E53BC1F20A5830011FEE7 /* BaseViewController.h */,
 				241E53BD1F20A5830011FEE7 /* BaseViewController.m */,
 				241A04EA1F204C030036F237 /* Main.storyboard */,
@@ -196,23 +206,44 @@
 			path = AppTableViewPlaceholderViewUITests;
 			sourceTree = "<group>";
 		};
-		241A05A71F204CC40036F237 /* UITableViewPlaceholder */ = {
+		2436906E206E5F50006DDA49 /* UItableViewPlaceholder */ = {
 			isa = PBXGroup;
 			children = (
-				241A05B31F204D170036F237 /* nodata.png */,
-				241A05A81F204CC40036F237 /* NSObject+Swizzling.h */,
-				241A05A91F204CC40036F237 /* NSObject+Swizzling.m */,
-				241A05AA1F204CC40036F237 /* UITableView+Placeholder.h */,
-				241A05AB1F204CC40036F237 /* UITableView+Placeholder.m */,
-				241A05AC1F204CC40036F237 /* NoDataPlaceholderView.h */,
-				241A05AD1F204CC40036F237 /* NoDataPlaceholderView.m */,
-				241A05AE1F204CC40036F237 /* NoDataPlaceholderView.xib */,
-				24D0367F1F2089AC0009BC81 /* NotNetPlaceholderView.h */,
-				24D036801F2089AC0009BC81 /* NotNetPlaceholderView.m */,
-				24D036821F2089C60009BC81 /* NotNetPlaceholderView.xib */,
-				24D036841F208F2D0009BC81 /* ReRequesDataDelegate.h */,
+				2436907B206E5F50006DDA49 /* 第一次加载reload处理 */,
+				24BEFC1D1F205F2300C317F7 /* Reachability */,
+				2436906F206E5F50006DDA49 /* nodata.png */,
+				24369070206E5F50006DDA49 /* NoDataPlaceholderView.h */,
+				24369071206E5F50006DDA49 /* NoDataPlaceholderView.m */,
+				24369072206E5F50006DDA49 /* NoDataPlaceholderView.xib */,
+				24369073206E5F50006DDA49 /* NotNetPlaceholderView.h */,
+				24369074206E5F50006DDA49 /* NotNetPlaceholderView.m */,
+				24369075206E5F50006DDA49 /* NotNetPlaceholderView.xib */,
+				24369076206E5F50006DDA49 /* NSObject+Swizzling.h */,
+				24369077206E5F50006DDA49 /* NSObject+Swizzling.m */,
+				24369078206E5F50006DDA49 /* ReRequesDataDelegate.h */,
+				24369079206E5F50006DDA49 /* UITableView+Placeholder.h */,
+				2436907A206E5F50006DDA49 /* UITableView+Placeholder.m */,
 			);
-			path = UITableViewPlaceholder;
+			path = UItableViewPlaceholder;
+			sourceTree = "<group>";
+		};
+		2436907B206E5F50006DDA49 /* 第一次加载reload处理 */ = {
+			isa = PBXGroup;
+			children = (
+				2436907C206E5F50006DDA49 /* Aspects */,
+				2436907F206E5F50006DDA49 /* ZXAspectEx.h */,
+				24369080206E5F50006DDA49 /* ZXAspectEx.m */,
+			);
+			path = "第一次加载reload处理";
+			sourceTree = "<group>";
+		};
+		2436907C206E5F50006DDA49 /* Aspects */ = {
+			isa = PBXGroup;
+			children = (
+				2436907D206E5F50006DDA49 /* Aspects.h */,
+				2436907E206E5F50006DDA49 /* Aspects.m */,
+			);
+			path = Aspects;
 			sourceTree = "<group>";
 		};
 		24BEFC1D1F205F2300C317F7 /* Reachability */ = {
@@ -352,11 +383,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24D036831F2089C60009BC81 /* NotNetPlaceholderView.xib in Resources */,
+				24369085206E5F52006DDA49 /* NotNetPlaceholderView.xib in Resources */,
+				24369081206E5F52006DDA49 /* nodata.png in Resources */,
+				24369083206E5F52006DDA49 /* NoDataPlaceholderView.xib in Resources */,
 				241A04F11F204C030036F237 /* LaunchScreen.storyboard in Resources */,
 				241A04EE1F204C030036F237 /* Assets.xcassets in Resources */,
-				241A05B41F204D170036F237 /* nodata.png in Resources */,
-				241A05B21F204CC40036F237 /* NoDataPlaceholderView.xib in Resources */,
 				241A04EC1F204C030036F237 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,13 +553,16 @@
 			files = (
 				241A04E91F204C030036F237 /* ViewController.m in Sources */,
 				241E53BE1F20A5830011FEE7 /* BaseViewController.m in Sources */,
-				241A05B01F204CC40036F237 /* UITableView+Placeholder.m in Sources */,
 				24BEFC231F207DC000C317F7 /* ZXNetworkingConfigurationManager.m in Sources */,
-				241A05B11F204CC40036F237 /* NoDataPlaceholderView.m in Sources */,
+				24369086206E5F52006DDA49 /* NSObject+Swizzling.m in Sources */,
+				2436908C206E604C006DDA49 /* NetworkRequestTool.m in Sources */,
+				24369084206E5F52006DDA49 /* NotNetPlaceholderView.m in Sources */,
+				24369088206E5F52006DDA49 /* Aspects.m in Sources */,
+				24369089206E5F52006DDA49 /* ZXAspectEx.m in Sources */,
+				24369082206E5F52006DDA49 /* NoDataPlaceholderView.m in Sources */,
 				241A04E61F204C030036F237 /* AppDelegate.m in Sources */,
-				24D036811F2089AC0009BC81 /* NotNetPlaceholderView.m in Sources */,
 				241A04E31F204C030036F237 /* main.m in Sources */,
-				241A05AF1F204CC40036F237 /* NSObject+Swizzling.m in Sources */,
+				24369087206E5F52006DDA49 /* UITableView+Placeholder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
