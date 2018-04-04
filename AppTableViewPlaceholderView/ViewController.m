@@ -7,30 +7,42 @@
 //
 
 #import "ViewController.h"
-@interface ViewController ()
-//@property (nonatomic,strong) UITableView *tableView;
+#import "NetworkRequestTool.h"
+#import <MJRefresh/MJRefresh.h>
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) NSArray *dataArr;
+@property (nonatomic,assign) BOOL isShowData;
 @end
 
 @implementation ViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self loadData];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [self loadData];
+    }];
     [self.view addSubview:self.tableView];
-    
 }
 
 #pragma mark - ReRequesDataDelegate
 - (void)loadData
 {
      NSLog(@"重新请求");
+    [NetworkRequestTool getWithURL:@"http://123.57.213.117/Api/ServerTime/Get" params:nil success:^(id data) {
+        if (self.isShowData==0) {
+            self.dataArr = @[@"numberOfRowsInSection",@"numberOfRowsInSection",@"numberOfRowsInSection"];
+        }else{
+            self.dataArr = @[];
+        }
+        [self.tableView reloadData];
+        self.isShowData = !self.isShowData;
+        [self.tableView.mj_header endRefreshing];
+    } failure:^(NSError *error) {
+        [self.tableView.mj_header endRefreshing];
+    }];
 }
-
-//- (void)reRequesData
-//{
-//    NSLog(@"在这里再次调用网络请求");
-//}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return  self.dataArr.count;
@@ -48,21 +60,4 @@
     return cell;
 }
 
-//- (UITableView *)tableView
-//{
-//    if (!_tableView) {
-//        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
-//        _tableView.dataSource = self;
-//        _tableView.delegate = self;
-//        _tableView.reRequestDelegate = self;
-//    }
-//    return _tableView;
-//}
-- (NSArray *)dataArr
-{
-    if (!_dataArr) {
-        _dataArr = @[];
-    }
-    return _dataArr;
-}
 @end

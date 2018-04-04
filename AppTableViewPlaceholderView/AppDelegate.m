@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ZXNetworkingConfigurationManager.h"
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,12 +18,44 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
    
-    BOOL isReachability = [ZXNetworkingConfigurationManager shareInstance].isReachable;
-    if (isReachability) {
-        
-        NSLog(@"isReachability");
-    }
+    //a.初始化一个tabBar控制器
+         UITabBarController *tb=[[UITabBarController alloc]init];
+  //设置控制器为Window的根控制器
+         self.window.rootViewController=tb;
+    
+         //b.创建子控制器
+         ViewController *c1=[[ViewController alloc]init];
+         c1.view.backgroundColor=[UIColor grayColor];
+         c1.view.backgroundColor=[UIColor greenColor];
+         c1.tabBarItem.title=@"消息";
+         c1.tabBarItem.image=[UIImage imageNamed:@"tab_recent_nor"];
+         c1.tabBarItem.badgeValue=@"123";
+    
+         ViewController *c2=[[ViewController alloc]init];
+         c2.view.backgroundColor=[UIColor brownColor];
+         c2.tabBarItem.title=@"联系人";
+         c2.tabBarItem.image=[UIImage imageNamed:@"tab_buddy_nor"];
+    
+         ViewController *c3=[[ViewController alloc]init];
+         c3.tabBarItem.title=@"动态";
+   c3.tabBarItem.image=[UIImage imageNamed:@"tab_qworld_nor"];
+    
+        ViewController *c4=[[ViewController alloc]init];
+         c4.tabBarItem.title=@"设置";
+         c4.tabBarItem.image=[UIImage imageNamed:@"tab_me_nor"];
+    
+    
+         //c.添加子控制器到ITabBarController中
+         //c.1第一种方式
+     //    [tb addChildViewController:c1];
+     //    [tb addChildViewController:c2];
 
+        //c.2第二种方式
+        tb.viewControllers=@[c1,c2,c3,c4];
+    
+    
+         //2.设置Window为主窗口并显示出来
+         [self.window makeKeyAndVisible];
     return YES;
 }
 

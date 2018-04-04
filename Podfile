@@ -7,7 +7,7 @@ target 'AppTableViewPlaceholderView' do
  pod 'MBProgressHUD', '~> 1.0.0'
  pod 'AFNetworking', '~> 3.1.0'
   # Pods for AppTableViewPlaceholderView
-
+  pod 'MJRefresh'
   target 'AppTableViewPlaceholderViewTests' do
     inherit! :search_paths
     # Pods for testing

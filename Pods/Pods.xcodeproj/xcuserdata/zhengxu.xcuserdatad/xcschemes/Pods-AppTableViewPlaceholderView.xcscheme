@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E9E15BAED67F62D686F58DE501ED0628"
+               BlueprintIdentifier = "36B10BA8AC110097F9BAB3B1C2A8FB0B"
                BuildableName = "Pods_AppTableViewPlaceholderView.framework"
                BlueprintName = "Pods-AppTableViewPlaceholderView"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -36,6 +37,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -45,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E9E15BAED67F62D686F58DE501ED0628"
+            BlueprintIdentifier = "36B10BA8AC110097F9BAB3B1C2A8FB0B"
             BuildableName = "Pods_AppTableViewPlaceholderView.framework"
             BlueprintName = "Pods-AppTableViewPlaceholderView"
             ReferencedContainer = "container:Pods.xcodeproj">

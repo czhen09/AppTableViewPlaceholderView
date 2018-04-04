@@ -8,14 +8,12 @@
 
 #import "NetworkRequestTool.h"
 #import <AFNetworking/AFNetworking.h>
+#import "RequestFailureHandler.h"
 @implementation NetworkRequestTool
-+ (void)postWithURL:(NSString *)urlStr Method:(NSString *)method params:(id)params success:(void(^)(id data))success failure:(void(^)(NSError *error))failure{
++ (void)getWithURL:(NSString *)urlStr params:(id)params success:(void(^)(id data))success failure:(void(^)(NSError *error))failure{
     AFHTTPSessionManager *manager=[AFHTTPSessionManager manager];
-    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
-    manager.requestSerializer.timeoutInterval = 30.0f;
-    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
-    NSString * url = [NSString stringWithFormat:@"%@%@",urlStr,method];
-    [manager POST:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer]; manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    [manager GET:urlStr parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"responseObject===%@",responseObject);
         if (responseObject) {
             
@@ -24,35 +22,7 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         failure(error);
         //失败的时候处理
-        [NetworkRequestTool handleFailNoData];
+        [[RequestFailureHandler shareInstance] handleRequestFailure];
     }];
-}
-#pragma mark - 失败无数据处理
-+ (void)handleFailNoData
-{
-    UINavigationController *nav = (UINavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
-    UIViewController *vc = nav.visibleViewController;
-    if (vc.childViewControllers.count>0) {
-        
-        if ([vc.childViewControllers.firstObject isKindOfClass:[UIPageViewController class]]) {
-            UIPageViewController *pageVc = (UIPageViewController *)vc.childViewControllers.firstObject;
-            UIViewController *pageChild = pageVc.viewControllers.firstObject;
-            NSArray *subViews = pageChild.view.subviews;
-            [subViews enumerateObjectsUsingBlock:^(UIView *view, NSUInteger idx, BOOL * _Nonnull stop) {
-                if ([view isKindOfClass:[UITableView class]]) {
-                    UITableView *tableView = (UITableView *)view;
-                    [tableView reloadData];
-                }
-            }];
-        }
-    }else{
-        NSArray *subViews = vc.view.subviews;
-        [subViews enumerateObjectsUsingBlock:^(UIView *view, NSUInteger idx, BOOL * _Nonnull stop) {
-            if ([view isKindOfClass:[UITableView class]]) {
-                UITableView *tableView = (UITableView *)view;
-                [tableView reloadData];
-            }
-        }];
-    }
 }
 @end

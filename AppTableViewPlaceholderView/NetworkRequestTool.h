@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface NetworkRequestTool : NSObject
-
++ (void)getWithURL:(NSString *)urlStr params:(id)params success:(void(^)(id data))success failure:(void(^)(NSError *error))failure;
 @end
